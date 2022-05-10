@@ -1,4 +1,3 @@
-idf_component_register(
-    SRCS "main.c" "wifi_station.c"
-    INCLUDE_DIRS "."
-)
+file(GLOB_RECURSE sources ./*.c ./*.cpp)
+
+idf_component_register(SRCS "${sources}" INCLUDE_DIRS .)
